@@ -1,6 +1,7 @@
 package p012;
 
 import java.awt.Image;
+
 import javax.swing.ImageIcon;
 
 public class Ball {
@@ -11,7 +12,7 @@ public class Ball {
 	private Image image;
 
 	public Ball() {
-		ImageIcon ii = new ImageIcon(this.getClass().getResource(Ball));
+		ImageIcon ii = new ImageIcon(Ball);
 		image = ii.getImage();
 		x = Billiards.Width / 4 - 16;
 		y = Billiards.Height / 2 - 16;
@@ -29,6 +30,7 @@ public class Ball {
 		}
 		x += dx;
 		y += dy;
+
 		// TODO Check postcondition
 	}
 
