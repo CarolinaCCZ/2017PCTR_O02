@@ -52,7 +52,10 @@ public class Ball {
 		if (Math.abs(y - Board.TOPBOARD) < Math.abs(dy)) {
 			fi = -fi;
 		}
-		// TODO Check postcondition
+		
+		assert x > Board.LEFTBOARD && x < Board.RIGHTBOARD
+		&& y > Board.TOPBOARD && y < Board.BOTTOMBOARD : 
+			"Las bolas no pueden salirse fuera del tablero";
 	}
 
 	public int getX() {
