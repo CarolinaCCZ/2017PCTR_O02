@@ -4,6 +4,8 @@ import java.awt.Image;
 
 import javax.swing.ImageIcon;
 
+import p012.Board;
+
 public class Ball {
 	private String Ball = "/images/ball.png";
 
@@ -31,7 +33,10 @@ public class Ball {
 		x += dx;
 		y += dy;
 
-		// TODO Check postcondition
+		reflect();
+
+		assert x > Board.LEFTBOARD && x < Board.RIGHTBOARD
+				&& y > Board.TOPBOARD && y < Board.BOTTOMBOARD : "Las bolas no pueden salirse fuera del tablero";
 	}
 
 	public void reflect() {
