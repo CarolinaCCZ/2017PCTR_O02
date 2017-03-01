@@ -7,7 +7,7 @@ import javax.swing.ImageIcon;
 import p012.Board;
 
 public class Ball {
-	private String Ball = "/recursos/imagen/ball.png";
+	private String Ball = "/imagen/ball.png";
 
 	private double x, y, dx, dy;
 	private double v, fi;
