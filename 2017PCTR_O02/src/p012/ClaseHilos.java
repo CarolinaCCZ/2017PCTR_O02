@@ -21,7 +21,7 @@ public class ClaseHilos extends Thread {
 				TimeUnit.MILLISECONDS.sleep(1000); // Un segundo
 			}
 		} catch (InterruptedException e) {
-			return;
+			System.err.println("Interrumpido");
 		}
 
 	}
