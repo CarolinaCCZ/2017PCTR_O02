@@ -3,7 +3,6 @@ package p012;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
@@ -22,7 +21,8 @@ public class Billiards extends JFrame {
 
 	private final int N_BALL = 2 + 3;
 	private Ball[] balls;
-	
+	private ClaseHilos[] hilos;
+
 	public Billiards() {
 
 		board = new Board();
@@ -64,8 +64,11 @@ public class Billiards extends JFrame {
 	private class StartListener implements ActionListener {
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
-			// TODO Code is executed when start button is pushed
-
+			hilos = new ClaseHilos[N_BALL];
+			for (int i = 0; i < N_BALL; i++) {
+				hilos[i] = new ClaseHilos(balls[i], board);
+				hilos[i].start();
+			}
 		}
 	}
 
