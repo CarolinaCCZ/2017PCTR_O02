@@ -7,14 +7,14 @@ import javax.swing.ImageIcon;
 import p012.Board;
 
 public class Ball {
-	private String Ball = "/images/ball.png";
+	private String Ball = "/recursos/imagen/ball.png";
 
 	private double x, y, dx, dy;
 	private double v, fi;
 	private Image image;
 
 	public Ball() {
-		ImageIcon ii = new ImageIcon(Ball);
+		ImageIcon ii = new ImageIcon(this.getClass().getResource(Ball));
 		image = ii.getImage();
 		x = Billiards.Width / 4 - 16;
 		y = Billiards.Height / 2 - 16;
